@@ -13,7 +13,7 @@ export function Layout() {
                         <Story />
                     </div>
 
-                    <div className="box">
+                    <div className="box" style={{margin: "25px 0"}}>
                         <Post />
                     </div>
                 </div>
