@@ -26,18 +26,17 @@
 
 .input-fake {
     background: var(--background-main);
-    border-radius: 3px;
-
+    border-radius: 6px;
     padding: 3px 10px;
-
-    border: 1px solid var(--border);
-
     display: flex;
     align-items: center;
+    height: 36px;
+    width: 270px;
+    margin-left: 30px;
 }
 
 .input-fake input {
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 7px;
 }
 
