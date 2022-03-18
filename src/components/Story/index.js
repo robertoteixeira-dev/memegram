@@ -5,7 +5,7 @@ export function Story() {
 
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch(`localhost:3001/users`)
+        fetch(`http://localhost:3001/users`)
             .then((response) => {
                 return response.json()
             })
@@ -26,10 +26,10 @@ export function Story() {
                 <div className="user-elements" key={key}>
 
                     <div>
-                        <img className="image-user-story" src="https://avatars.githubusercontent.com/u/98705705?s=400&u=70669d25bc2d9149f2a7527530ae960767b8fe5f&v=4" />
+                       {/* <img className="image-user-story" />*/}
                     </div>
-
-                    <span>{users.username}</span>
+                        
+                    <span>{user.username}</span>
 
                 </div>
             ))}
