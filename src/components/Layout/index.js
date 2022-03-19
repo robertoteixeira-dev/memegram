@@ -4,6 +4,7 @@ import { Story } from '../Story'
 import { Post } from '../Post'
 import { Suggestion } from '../Suggestion'
 import { useEffect, useState } from 'react'
+import { SignUp } from '../SignUp'
 
 export function Layout() {
 
@@ -32,22 +33,7 @@ export function Layout() {
         <>
             <div className="MainGrid">
 
-                <div className="first-column" style={{gridArea: "firstColumn"}}>
-                    <div className="box">
-                        <Story />
-                    </div>
-
-                    <div className="box" style={{margin: "25px 0"}}>
-                        {/*<Post x={{buceta}} />*/}
-
-                        {posts.map((post) => (
-                            <Post post={{post}}></Post>
-                        ))}
-
-                        
-
-                    </div>
-                </div>
+               <SignUp />
 
                 <div className="suggestion-box" style={{gridArea: "secondColumn"}}>
                     <Suggestion />
