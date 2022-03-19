@@ -7,7 +7,9 @@ import { useEffect, useState } from 'react'
 
 export function Layout() {
 
-    /*const [posts, setPosts] = useState([])
+    const bucetas = [{name: 'xerequina'}];
+
+    const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch(`http://localhost:3001/posts/2a3917d5-2ce5-4aa0-9560-2105aa5615c0/0/100`)
             .then((response) => {
@@ -24,7 +26,7 @@ export function Layout() {
                 throw new Error(err)
             })
 
-    }, []);*/
+    }, []);
 
     return (
         <>
@@ -36,7 +38,13 @@ export function Layout() {
                     </div>
 
                     <div className="box" style={{margin: "25px 0"}}>
-                        <Post />
+                        {/*<Post x={{buceta}} />*/}
+
+                        {posts.map((post) => (
+                            <Post post={{post}}></Post>
+                        ))}
+
+                        
 
                     </div>
                 </div>

@@ -6,17 +6,16 @@ import { IconContext } from 'react-icons/lib'
 import { React } from 'react';
 import { useEffect, useState } from 'react'
 
-export function Post() {
-
-    //const post = props.post;
+export function Post(props) {
 
     const [posts, setPosts] = useState([])
 
-    const [limitUsers, setLimitUsers] = useState(1)
-    //O slice cria uma  posição do inicio e fim (Array.prototype.slice)
-    const slice = posts.slice(0, limitUsers)
+    const post = props.post.post;
 
     useEffect(() => {
+        
+        const post = props.post;
+
         fetch(`http://localhost:3001/posts/2a3917d5-2ce5-4aa0-9560-2105aa5615c0/0/100`)
             .then((response) => {
 
@@ -37,14 +36,14 @@ export function Post() {
     return (
 
         <div className="container">
-            {slice.map((post, key) => (
-                <div>
+            
+            <div>
                     <header className="header-post">
 
                         <div className="infos-post">
-                            <img className="img-header-post" src="https://avatars.githubusercontent.com/u/98705705?s=400&u=70669d25bc2d9149f2a7527530ae960767b8fe5f&v=4" />
+                            <img className="img-header-post" src="" />
 
-                            <p>{posts.username}</p>
+                            <p>{post.username}</p>
                         </div>
 
                         <FiMoreHorizontal />
@@ -52,7 +51,7 @@ export function Post() {
                     </header>
 
                     <div className="img-post">
-                        <img src={`http://localhost:3001/img/${post.id}.${post.ext}`} />
+                        <img src={`http://localhost:3001/tmp/${post.id}.${post.ext}`} />
                     </div>
 
 
@@ -86,7 +85,7 @@ export function Post() {
 
                         <div className="legend">
                             <p>
-                                <strong>roberto.dev</strong> <span>{post.body}</span>
+                                <strong>{post.username}</strong> <span>{post.body}</span>
                             </p>
                         </div>
 
@@ -110,7 +109,7 @@ export function Post() {
                         </div>
                     </div>
                 </div>
-            ))}
+
         </div>
     );
 }
