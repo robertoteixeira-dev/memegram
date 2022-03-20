@@ -7,14 +7,10 @@ import { useEffect, useState } from 'react'
 
 export function Layout() {
 
-    const bucetas = [{name: 'xerequina'}];
-
     const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch(`http://localhost:3001/posts/2a3917d5-2ce5-4aa0-9560-2105aa5615c0/0/100`)
             .then((response) => {
-
-                //console.log(response.json());
 
                 return response.json()
             })
@@ -31,25 +27,20 @@ export function Layout() {
     return (
         <>
             <div className="MainGrid">
-
-                <div className="first-column" style={{gridArea: "firstColumn"}}>
+                <div className="first-column" style={{ gridArea: "firstColumn" }}>
                     <div className="box">
                         <Story />
                     </div>
 
-                    <div className="box" style={{margin: "25px 0"}}>
-                        {/*<Post x={{buceta}} />*/}
+                    <div className="box" style={{ margin: "25px 0" }}>
 
                         {posts.map((post) => (
-                            <Post post={{post}}></Post>
+                            <Post post={{ post }}></Post>
                         ))}
-
-                        
-
                     </div>
                 </div>
 
-                <div className="suggestion-box" style={{gridArea: "secondColumn"}}>
+                <div className="suggestion-box" style={{ gridArea: "secondColumn" }}>
                     <Suggestion />
                 </div>
             </div>
