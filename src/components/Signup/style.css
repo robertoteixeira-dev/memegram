@@ -1,0 +1,98 @@
+.SignUp-MainGrid {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: 1px solid var(--border);
+    background: var(--background);
+
+    position: fixed;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.signUp {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.signUp_rightcomponent {
+    border: 1px solid var(--border);
+    width: 350px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+    background-color: var(--background);
+    justify-content: center;
+}
+
+.signUp_rightcomponent .logo {
+    width: 175px;
+    margin-top: 25px;
+    object-fit: cover;
+}
+
+.text {
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logipage__text{
+    width:258px;
+    height: 36px;
+    margin:5px;
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.login__button{
+    width:270px;
+    height: 36px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+    border:1px solid var(--quartary);
+    background-color: var(--quartary);
+    color: white;
+}
+
+.signingUp {
+    color: var(--secondary);
+    font-size: 12px;
+    margin: 15px;
+}
+
+.signUp__signinoption{
+    border: 1px solid var(--border);
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.signUp__signinoption span{
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--quartary);
+}
+
+.footer-signup {
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-signup p {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 15px;
+    cursor: pointer;
+}
