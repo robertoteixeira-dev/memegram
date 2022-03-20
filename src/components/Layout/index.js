@@ -4,7 +4,6 @@ import { Story } from '../Story'
 import { Post } from '../Post'
 import { Suggestion } from '../Suggestion'
 import { useEffect, useState } from 'react'
-import { SignUp } from '../SignUp'
 
 export function Layout() {
 
