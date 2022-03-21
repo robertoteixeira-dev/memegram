@@ -63,7 +63,7 @@ export function Suggestion() {
 
             <footer className="footer-suggestion">
                 <p>About &bull; Help &bull; Press &bull; API &bull; Jobs &bull; Privacy &bull; Terms &bull; Location &bull; Top Accounts &bull; Hashtags &bull; Language &bull; </p>
-                <p> &copy; 2022 INSTAGRAM FROM META </p>
+                <p> &copy; 2022 MEMEGRAM FROM ROBERTO TEIXEIRA </p>
             </footer>
         </div>
     )
