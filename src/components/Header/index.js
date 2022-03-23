@@ -7,13 +7,16 @@ import { FiHeart } from 'react-icons/fi'
 import './style.css'
 import { IconContext } from 'react-icons'
 
+import roberto from '../../images/roberto.jpg';
+import logo from '../../images/logo.png';
+
 export function Header() {
     return (
         <header className="header">
 
             <div className="container">
 
-                <img className="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" />
+                <img className="logo" src={logo} />
 
                 <div className="input-fake">
                     <IconContext.Provider value={{ color: '#8e8e8e' }}>
@@ -46,7 +49,7 @@ export function Header() {
 
                     </IconContext.Provider>
 
-                    <img className="img-user" src="https://avatars.githubusercontent.com/u/98705705?s=400&u=70669d25bc2d9149f2a7527530ae960767b8fe5f&v=4"></img>
+                    <img className="img-user" src={roberto} />
 
                 </div>
 

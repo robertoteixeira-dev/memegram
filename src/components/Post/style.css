@@ -17,6 +17,11 @@
     gap: 16px;
 }
 
+.infos-post {
+    font-weight: 500;
+}
+
+
 .img-post img {
     width: 100%;
     object-fit: cover;
@@ -54,7 +59,7 @@
 }
 
 .legend p span {
-    font-weight: 500;
+    font-weight: 300;
     text-decoration: none;
 }
 

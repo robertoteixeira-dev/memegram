@@ -1,11 +1,8 @@
-.LogIn-MainGrid {
-    display: grid;
+.Upload-MainGrid {
+    display: flex;
+    flex-wrap: wrap;
 
-    grid-template-areas: "firstColumn secondColumn";
-    grid-template-columns: 50% 50%;
-
-    grid-gap: 35px;
-
+    border: 1px solid var(--border);
     background: var(--background);
 
     position: fixed;
@@ -15,58 +12,39 @@
     height: 100%;
 }
 
-.form-box {
-    background: var(--background);
-}
-
-.phone-box {
+.upload {
     display: flex;
-    justify-content:right;
-}
-
-.phone-box img {
-    width: 65%;
-    margin: 20px;
-    object-fit: cover;
-
-}
-
-.loginPage {
-    display: flex;
-    justify-content: left;
-    align-self: center;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    
 }
 
-.loginPage_rightcomponent {
+.upload_rightcomponent {
     border: 1px solid var(--border);
     width: 350px;
     padding-bottom: 25px;
     margin-top: 25px;
     text-align: center;
-    background-color: white;
+    background-color: var(--background);
+    justify-content: center;
 }
 
-.loginPage_rightcomponent .logo {
-    width: 175px;
+.upload_rightcomponent .logo {
+    width: 250px;
     margin-top: 25px;
     object-fit: cover;
 }
 
-.loginPage__signupoption {
-    border: 1px solid var(--border);
-    padding: 20px;
-    margin: 10px;
-}
 
-.loginPage__signupoption span{
-    cursor: pointer;
+.text {
+    color: var(--secondary);
+    font-size: 16px;
     font-weight: bold;
-    color:  var(--quartary);
+
 }
 
-.loginPage__text{
+.logipage__text{
     width:258px;
     height: 36px;
     margin:5px;
@@ -75,34 +53,19 @@
     padding-left: 10px;
     border-radius: 5px;
 }
-
 .login__button{
     width:270px;
     height: 36px;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 5px;
-    border:1px solid #0395F6;
-    background-color:  var(--quartary);
+    border:1px solid var(--quartary);
+    background-color: var(--quartary);
     color: white;
-    cursor: pointer;
 }
 
-.login_forgot {
-    color: rgba(var(--fe0,0,55,107),1);
+.uploading {
+    color: var(--secondary);
     font-size: 12px;
-    line-height: 14px;
-    margin-top: 12px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.loginpage__signupoption {
-    margin-top: 25px;
-    height:56px;
-    width: 350px;
-    background-color: white;
-    border: 1px solid #DBDBDB;
-    text-align: center;
-    cursor: pointer;
+    margin: 15px;
 }

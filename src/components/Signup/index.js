@@ -1,13 +1,14 @@
 import './style.css'
 import { useNavigate } from 'react-router-dom';
+import logo from '../../images/logo.png';
 
 const FormData = require('form-data');
 
 export function SignUp() {
 
-    const state = { 
-       user: {},
-       profile: null
+    const state = {
+        user: {},
+        profile: null
     }
 
     const navigate = useNavigate();
@@ -22,20 +23,20 @@ export function SignUp() {
 
         const requestOptions = {
             method: "POST",
-            headers: { 'Access-Control-Allow-Origin' : '*' },
-            body : form
+            headers: { 'Access-Control-Allow-Origin': '*' },
+            body: form
         };
 
         fetch("http://localhost:3001/users", requestOptions)
-        .then((response) => response.json())
-        .then(data => {
-            console.log(data);
-            //localStorage.setItem("users", JSON.stringify(user));
-            navigate("/login", { replace: true });
-        })
-        .catch(error =>{
-           console.log("merda de error ", error); 
-        });
+            .then((response) => response.json())
+            .then(data => {
+                console.log(data);
+                //localStorage.setItem("users", JSON.stringify(user));
+                navigate("/login", { replace: true });
+            })
+            .catch(error => {
+                console.log("merda de error ", error);
+            });
 
     }
 
@@ -46,7 +47,7 @@ export function SignUp() {
             <div className="signUp">
                 <div>
                     <div className="signUp_rightcomponent">
-                        <img className="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" />
+                        <img className="logo" src={logo} />
 
                         <div className="text">
                             Sign up to see photos and videos from your friends.
@@ -54,10 +55,10 @@ export function SignUp() {
 
                         <div className="signUp__signin">
                             <div>
-                                <input className="logipage__text" type="text" placeholder="Username" onChange={(event)=>{state.user.username=event.currentTarget.value;}} />
-                                <input className="logipage__text" type="text" placeholder="Email" onChange={(event)=>{state.user.email=event.currentTarget.value;}}/>
-                                <input className="logipage__text" type="password" placeholder="Password" onChange={(event)=>{state.user.password=event.currentTarget.value;}} />
-                                <input className="" type="file" id="profile" placeholder="Profile" onChange={(event)=>{state.profile=event.currentTarget.files[0];}} />
+                                <input className="logipage__text" type="text" placeholder="Username" onChange={(event) => { state.user.username = event.currentTarget.value; }} />
+                                <input className="logipage__text" type="text" placeholder="Email" onChange={(event) => { state.user.email = event.currentTarget.value; }} />
+                                <input className="logipage__text" type="password" placeholder="Password" onChange={(event) => { state.user.password = event.currentTarget.value; }} />
+                                <input className="" type="file" id="profile" placeholder="Profile" onChange={(event) => { state.profile = event.currentTarget.files[0]; }} />
                                 <button type="submit" className="login__button" onClick={newSignUp}>Sign up</button>
                             </div>
 
@@ -74,8 +75,6 @@ export function SignUp() {
                     </div>
 
                 </div>
-
-
 
             </div>
 

@@ -1,5 +1,5 @@
 import './style.css'
-import phone from '../../images/phone.svg';
+
 import { useNavigate } from 'react-router-dom';
 
 export function Logout() {
@@ -34,7 +34,7 @@ export function Logout() {
     }
 
     return (
-        <div className='LogIn-MainGrid'>
+        <div className='LogOut-MainGrid'>
 
             <div className="first-column" style={{ gridArea: "firstColumn" }}>
 
@@ -42,9 +42,9 @@ export function Logout() {
 
             <div className="form-box" style={{ gridArea: "secondColumn" }}>
 
-                <div className="loginPage">
+                <div className="logOut">
                     <div>
-                        <div className="loginPage_rightcomponent">
+                        <div className="logOut_rightcomponent">
                             <img className="logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" />
                             <div className="loginPage__signin">
 

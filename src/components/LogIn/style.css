@@ -13,6 +13,7 @@
     
     width: 100%;
     height: 100%;
+    
 }
 
 .form-box {
@@ -25,10 +26,9 @@
 }
 
 .phone-box img {
-    width: 65%;
+    width: 100%;
     margin: 20px;
     object-fit: cover;
-
 }
 
 .loginPage {
@@ -49,7 +49,7 @@
 }
 
 .loginPage_rightcomponent .logo {
-    width: 175px;
+    width: 250px;
     margin-top: 25px;
     object-fit: cover;
 }
@@ -105,4 +105,14 @@
     border: 1px solid #DBDBDB;
     text-align: center;
     cursor: pointer;
+}
+
+.loginPage__option {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginPage_dwimg {
+    margin: 5px;
 }

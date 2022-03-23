@@ -1,4 +1,4 @@
-.LogIn-MainGrid {
+.LogOut-MainGrid {
     display: grid;
 
     grid-template-areas: "firstColumn secondColumn";
@@ -19,19 +19,7 @@
     background: var(--background);
 }
 
-.phone-box {
-    display: flex;
-    justify-content:right;
-}
-
-.phone-box img {
-    width: 65%;
-    margin: 20px;
-    object-fit: cover;
-
-}
-
-.loginPage {
+.logOut {
     display: flex;
     justify-content: left;
     align-self: center;
@@ -39,7 +27,7 @@
     flex-wrap: wrap;
 }
 
-.loginPage_rightcomponent {
+.logOut_rightcomponent {
     border: 1px solid var(--border);
     width: 350px;
     padding-bottom: 25px;
@@ -48,32 +36,10 @@
     background-color: white;
 }
 
-.loginPage_rightcomponent .logo {
+.logOut_rightcomponent .logo {
     width: 175px;
     margin-top: 25px;
     object-fit: cover;
-}
-
-.loginPage__signupoption {
-    border: 1px solid var(--border);
-    padding: 20px;
-    margin: 10px;
-}
-
-.loginPage__signupoption span{
-    cursor: pointer;
-    font-weight: bold;
-    color:  var(--quartary);
-}
-
-.loginPage__text{
-    width:258px;
-    height: 36px;
-    margin:5px;
-    border: 1px solid #DBDBDB;
-    background-color: #FAFAFA;
-    padding-left: 10px;
-    border-radius: 5px;
 }
 
 .login__button{
@@ -85,24 +51,5 @@
     border:1px solid #0395F6;
     background-color:  var(--quartary);
     color: white;
-    cursor: pointer;
-}
-
-.login_forgot {
-    color: rgba(var(--fe0,0,55,107),1);
-    font-size: 12px;
-    line-height: 14px;
-    margin-top: 12px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.loginpage__signupoption {
-    margin-top: 25px;
-    height:56px;
-    width: 350px;
-    background-color: white;
-    border: 1px solid #DBDBDB;
-    text-align: center;
     cursor: pointer;
 }

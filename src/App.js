@@ -1,12 +1,11 @@
 import { Header } from './components/Header';
-import { Layout } from './components/Layout';
 import { LogIn } from './components/LogIn';
 import { Posts } from './components/Posts';
 import { Upload } from './components/Upload';
 import { Logout } from './components/Logout';
 
 import React from 'react';
-import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Link, } from 'react-router-dom';
 
 import './styles/global.css'
 import { SignUp } from './components/Signup';
@@ -28,8 +27,6 @@ function App() {
         <Route exact path='/upload' element={<Upload />}></Route>
         <Route exact path='/logout' element={<Logout />}></Route>
       </Routes>
-
-      <Layout />
     </>
   );
 }

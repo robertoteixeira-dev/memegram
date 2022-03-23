@@ -1,10 +1,10 @@
 import './style.css'
-import phone from '../../images/phone.svg';
+import logo from '../../images/logo.png';
 import { useNavigate } from 'react-router-dom';
 
 export function Upload() {
 
-    const state = { 
+    const state = {
         post: {},
         image: null
     };
@@ -21,50 +21,50 @@ export function Upload() {
 
         const requestOptions = {
             method: "POST",
-            headers: { 'Access-Control-Allow-Origin' : '*', 'access_token': localStorage.getItem('access_token') },
-            body : form
+            headers: { 'Access-Control-Allow-Origin': '*', 'access_token': localStorage.getItem('access_token') },
+            body: form
         };
-        
+
         fetch("http://localhost:3001/upload", requestOptions)
-        .then((response) => response.json())
-        .then(data => {
-            console.log(data);
-            navigate("/posts", { replace: true });
-        })
-        .catch(error =>{
-           console.log(error); 
-        });
+            .then((response) => response.json())
+            .then(data => {
+                console.log(data);
+                navigate("/posts", { replace: true });
+            })
+            .catch(error => {
+                console.log(error);
+            });
 
     }
 
     return (
-        <div className='LogIn-MainGrid'>
+        <div className='Upload-MainGrid'>
 
-            <div className="first-column" style={{ gridArea: "firstColumn" }}>
-            </div>
+            <div className="upload">
+                <div>
+                    <div className="upload_rightcomponent">
+                        <img className="logo" src={logo} />
 
-            <div className="form-box" style={{ gridArea: "secondColumn" }}>
+                        <div className="text">
+                            Post your memes and have fun with your friends!
+                        </div>
 
-                <div className="loginPage">
-                    <div>
-                        <div className="loginPage_rightcomponent">
-                            
-                            <div className="loginPage__signin">
+                        <div className="upload__signin">
+                            <div>
 
-                                <div>
-                                <input className="logipage__text" type="text" placeholder="Description" onChange={(event)=>{state.post.description=event.currentTarget.value;}} />
-                                <input className="" type="file" id="image" placeholder="Image" onChange={(event)=>{state.image=event.currentTarget.files[0];}} />
-                                    <button type="submit" className="login__button" onClick={send}>Upload</button>
-                                </div>
+                                <input className="logipage__text" type="text" placeholder="Description" onChange={(event) => { state.post.description = event.currentTarget.value; }} />
+                                <input className="profile" type="file" id="image" placeholder="Image" onChange={(event) => { state.image = event.currentTarget.files[0]; }} />
+                                <button type="submit" className="login__button" onClick={send}>Upload</button>
 
                             </div>
+
+                            <div className="uploading">
+                                By posting, you agree to our Terms , Data Policy and Cookies Policy .
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
-
     )
 }
-
