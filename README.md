@@ -6,6 +6,10 @@
 
 <p align="center">This is a Full Stack Instagram clone project for sharing memes with RESTful API developed with React.JS, Node.JS and PostgreSQL.</p>
 
+<div align="center" >
+  ✔️This repository is the Front-End part.
+</div>
+
 ## 📲 Creating a new account 
 
 <div align="center" >
