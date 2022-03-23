@@ -9,7 +9,7 @@
 ## 📲 Creating a new account 
 
 <div align="center" >
-  <img src="signup.gif" alt="sign-up" height="425">
+  <img src="./gifs/signup.gif" alt="sign-up" height="425">
 </div>
 
 <br>
@@ -17,25 +17,25 @@
 ## 📲 Logging into my account
 
 <div align="center" >
-  <img src="./login.gif" alt="login" height="425">
+  <img src="./gifs/login.gif" alt="login" height="425">
 </div>
 
 ## 📲 Uploading a new meme
 
 <div align="center" >
-  <img src="./upload.gif" alt="upload" height="425">
+  <img src="./gifs/upload.gif" alt="upload" height="425">
 </div>
 
 ## 📲 Responsive Web Design
 
 <div align="center" >
-  <img src="./responsive.gif" alt="responsive" height="425">
+  <img src="./gifs/responsive.gif" alt="responsive" height="425">
 </div>
 
 ## 📲 Back-End
 
 <div align="center" >
-  <img src="./backend.gif" alt="backend" height="425">
+  <img src="./gifs/backend.gif" alt="backend" height="425">
 </div>
 
 ## 🚀 Technologies
