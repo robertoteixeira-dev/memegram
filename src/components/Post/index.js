@@ -11,28 +11,7 @@ export function Post(props) {
     const [posts, setPosts] = useState([])
 
     const post = props.post.post;
-
-    useEffect(() => {
-        
-        const post = props.post;
-
-        fetch(`http://localhost:3001/posts/2a3917d5-2ce5-4aa0-9560-2105aa5615c0/0/100`)
-            .then((response) => {
-
-                //console.log(response.json());
-
-                return response.json()
-            })
-            .then((result) => {
-                setPosts(result)
-            })
-
-            .catch((err) => {
-                throw new Error(err)
-            })
-
-    }, []);
-
+    
     return (
 
         <div className="container">
@@ -41,7 +20,7 @@ export function Post(props) {
                     <header className="header-post">
 
                         <div className="infos-post">
-                            <img className="img-header-post" src="" />
+                            <img className="img-header-post" src={`http://localhost:3001/profiles/${post.user_id}.${post.profile_ext}`} />
 
                             <p>{post.username}</p>
                         </div>
@@ -51,7 +30,7 @@ export function Post(props) {
                     </header>
 
                     <div className="img-post">
-                        <img src={`http://localhost:3001/tmp/${post.id}.${post.ext}`} />
+                        <img src={`http://localhost:3001/images/${post.id}.${post.ext}`} />
                     </div>
 
 

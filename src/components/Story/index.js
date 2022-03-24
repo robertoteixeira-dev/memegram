@@ -26,7 +26,7 @@ export function Story() {
                 <div className="user-elements" key={key}>
 
                     <div>
-                       {/* <img className="image-user-story" />*/}
+                       <img className="image-user-story" src={`http://localhost:3001/profiles/${user.id}.${user.ext}`} />
                     </div>
                         
                     <span>{user.username}</span>

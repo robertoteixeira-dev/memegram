@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import './style.css'
 
+import roberto from '../../images/roberto.jpg';
+
 export function Suggestion() {
-    //Consumingo API dos meu seguidores do Github
     const [suggestions, setSuggestions] = useState([])
-    //Ele esta mostrando todos, então tenho que criar um limite
+
     const [limitUsers, setLimitUsers] = useState(5)
-    //O slice cria uma  posição do inicio e fim (Array.prototype.slice)
+  
     const slice = suggestions.slice(0, limitUsers)
 
     useEffect(() => {
@@ -26,12 +27,12 @@ export function Suggestion() {
     return (
         <div className="container-suggestion">
             <div className="header-suggestion">
-                <img src={`https://github.com/robertoteixeira-dev.png`} />
+                <img src={roberto} />
 
                 <div className="user-infos-suggestion">
 
                     <div className="infos">
-                        <span>roberto.dev</span>
+                        <span>roberto</span>
                         <p>roberto teixeira</p>
                     </div>
 
@@ -63,7 +64,7 @@ export function Suggestion() {
 
             <footer className="footer-suggestion">
                 <p>About &bull; Help &bull; Press &bull; API &bull; Jobs &bull; Privacy &bull; Terms &bull; Location &bull; Top Accounts &bull; Hashtags &bull; Language &bull; </p>
-                <p> &copy; 2022 INSTAGRAM FROM META </p>
+                <p> &copy; 2022 MEMEGRAM FROM ROBERTO TEIXEIRA </p>
             </footer>
         </div>
     )
